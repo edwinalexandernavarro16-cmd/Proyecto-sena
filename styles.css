@@ -247,3 +247,120 @@ body {
     opacity: 1;
     transform: translateY(0);
 }
+
+/* -------- ACTIVIDADES -------- */
+.activities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.activity-card {
+    background: var(--card-bg);
+    border-radius: 15px;
+    box-shadow: 0 4px 10px #0002;
+    padding: 20px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.activity-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px #0003;
+}
+
+.activity-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+.activity-card h3 {
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+
+.activity-card p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.btn-activity {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #0066ff;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-weight: 500;
+}
+
+.btn-activity:hover {
+    background: #004fcc;
+    transform: translateY(-3px);
+}
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 9999;
+    padding-top: 60px; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.8);
+}
+
+/* Imagen ampliada */
+.modal-contenido {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 80vh;
+    border-radius: 10px;
+}
+
+/* Botón de cerrar */
+.cerrar {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Efecto suave */
+.modal-contenido {
+    animation: zoom 0.3s ease;
+}
+@keyframes zoom {
+    from {transform: scale(0.5);}
+    to {transform: scale(1);}
+}
+
+.btn-ver-mas {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #0066ff;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    transition: 0.3s;
+}
+
+.btn-ver-mas:hover {
+    background: #004fcc;
+    transform: translateY(-3px);
+}

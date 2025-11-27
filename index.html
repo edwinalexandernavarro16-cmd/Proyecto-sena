@@ -73,6 +73,38 @@
         </div>
     </section>
 
+    <!-- ACTIVIDADES -->
+    <section id="activities" class="section activities reveal">
+        <h2>Mis Actividades</h2>
+
+        <div class="activities-grid">
+
+            <!-- CARD 1 -->
+            <div class="activity-card">
+                <img src="images/Caja Herramientas.png" alt="Caja de herramientas TIC">
+                <h3>Caja de Herramientas TIC</h3>
+                <p>Actividad donde identifiqué y clasifiqué diversas herramientas tecnológicas esenciales en procesos digitales.</p>
+                <button class="btn-ver-mas" onclick="abrirModal('images/Caja Herramientas.png')">Ver más</button>
+            </div>
+
+            <!-- CARD 2 -->
+            <div class="activity-card">
+                <img src="images/Clasificando las herramientas TIC.png" alt="Clasificación TIC">
+                <h3>Clasificando Herramientas TIC</h3>
+                <p>Ejercicio práctico donde organicé herramientas según su propósito en el área tecnológica.</p>
+                <button class="btn-ver-mas" onclick="abrirModal('images/Clasificando las herramientas TIC.png')">Ver más</button>
+            </div>
+
+            <div class="activity-card">
+                <img src="images/Participacion Foro.png" alt="Participación Foro">
+                <h3>Participación Foro</h3>
+                <p>En el foro compartimos nuestras opiniones sobre los temas propuestos por la instructora y mostramos nuestra página web.</p>
+                <button class="btn-ver-mas" onclick="abrirModal('images/Participacion Foro.png')">Ver más</button>
+            </div>
+
+        </div>
+    </section>
+
     <!-- CONTACTO -->
     <section id="contact" class="section contact reveal">
         <h2>Contacto</h2>
@@ -123,8 +155,22 @@
             });
         }
 
+        function abrirModal(rutaImagen) {
+            document.getElementById("modalImagen").style.display = "block";
+            document.getElementById("imagenAmpliada").src = rutaImagen;
+        }
+
+        function cerrarModal() {
+            document.getElementById("modalImagen").style.display = "none";
+        }
+
         window.addEventListener("scroll", revealOnScroll);
         window.addEventListener("load", revealOnScroll);
     </script>
+
+    <div id="modalImagen" class="modal" onclick="cerrarModal()">
+        <span class="cerrar">&times;</span>
+        <img id="imagenAmpliada" class="modal-contenido">
+    </div>
 </body>
 </html>
